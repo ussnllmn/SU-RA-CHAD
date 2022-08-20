@@ -9,7 +9,6 @@ export const load = async ({ locals }) => {
 
   client.on("interactionCreate", async (interaction) => {
     if (!interaction.isChatInputCommand()) return;
-
     if (interaction.commandName === "ตบ") {
       await interaction.reply("สุรชาติเก็บแว่นให้คุณ");
     }
@@ -26,11 +25,3 @@ export const load = async ({ locals }) => {
     status: 200,
   };
 };
-
-// export const POST = async ({ request, locals }) => {
-//   const form = await request.formData();
-
-//   await api("POST", `todos/${locals.userid}`, {
-//     text: form.get("text"),
-//   });
-// };
