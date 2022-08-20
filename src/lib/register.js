@@ -1,5 +1,5 @@
-const { REST, Routes } = require("discord.js");
-const dotenv = require("dotenv");
+import { REST, Routes } from "discord.js";
+import dotenv from "dotenv";
 dotenv.config();
 
 const commands = [
@@ -14,6 +14,10 @@ const commands = [
   {
     name: "หงี่",
     description: "สุรชาติอยากให้คุณหันหลังมา",
+  },
+  {
+    name: "เป็นห่วง",
+    description: "สุรชาติอยากคอยดูแลคุณ",
   },
 ];
 
