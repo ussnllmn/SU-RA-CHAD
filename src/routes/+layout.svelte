@@ -4,10 +4,10 @@
   import { onMount } from "svelte";
   let status = "panding";
   onMount(async () => {
-    // await axios.post(`/discord_start`).then(function (response) {
-    //   console.log(response);
-    //   status = "complete";
-    // });
+    await axios.post(`/discord_start`).then(function (response) {
+      console.log(response);
+      status = "complete";
+    });
   });
 </script>
 
