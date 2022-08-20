@@ -3,16 +3,14 @@ import dotenv from "dotenv";
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 dotenv.config();
 
-export function startDiscord() {
-  console.log("asdasd");
-  return;
+export function discord_login() {
+  console.log("Starting discord!");
   client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}!`);
   });
 
   client.on("interactionCreate", async (interaction) => {
     if (!interaction.isChatInputCommand()) return;
-
     if (interaction.commandName === "ตบ") {
       await interaction.reply("สุรชาติเก็บแว่นให้คุณ");
     }
@@ -23,6 +21,5 @@ export function startDiscord() {
       await interaction.reply("สุรชาติกำลังทำบางอย่างด้านหลังคุณ");
     }
   });
-
   client.login(process.env.TOKEN);
 }
